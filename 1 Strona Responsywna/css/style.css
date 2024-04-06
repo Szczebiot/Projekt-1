@@ -4,6 +4,10 @@
 	padding: 0;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: "Open Sans", sans-serif;
 }
@@ -27,6 +31,7 @@ body {
 	color: #fff;
 }
 
+
 .hero-text h1 {
 	margin-bottom: 5px;
 	text-shadow: 3px 3px 5px #333;
@@ -42,13 +47,18 @@ body {
 	text-transform: uppercase;
 	text-align: center;
 }
-
+section {
+	scroll-margin-top: 80px;
+}
 /*nawigacja*/
 nav {
+	position: sticky;
+	top: 0;
 	height: 60px;
 	line-height: 60px;
 	background-color: #ddd;
 	text-align: center;
+	z-index: 10;
 }
 .burger-icon {
 	display: block;
@@ -104,8 +114,12 @@ main {
 	text-align: center;
 	font-size: 16px;
 }
+.product:hover h3{
+transform: scale(1.6);
+}
 .product h3 {
 	text-transform: uppercase;
+	transition: transform .3s;
 }
 .first-product {
 	background-image: url("../img/children.jpg");
